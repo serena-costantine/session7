@@ -10,6 +10,17 @@ app.get('/', function (req, res) {
     res.send('Hello World')
   })
 
+//another one:men ba3ed ma chtaghalna hawdouk zedna hayde w kafayna cheghel
+app.get('/students', function (req, res) {
+  var data = [
+    {id:1 , name:'Serena'},
+    {id:2 , name:'Maria'},
+    {id:3 , name:'Titi'},
+    {id:4 , name:'Mar'}
+  ]
+  res.send(data) //bas nekteba menjarreba 3a node app.js then: http://localhost:3030/students -> google chrome
+})
+
 app.listen(PORT, () => {
   console.log(`server started on port ${PORT}`);
 });
